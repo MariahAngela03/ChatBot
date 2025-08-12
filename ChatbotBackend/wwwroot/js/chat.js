@@ -48,3 +48,30 @@ form.addEventListener('submit', async (e) =>{
 
 // welcome message
 appendMessage('Hi! I\'m running locally. Say hi!', 'bot');
+
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// On load, check saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark-mode');
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+} else {
+  body.classList.remove('dark-mode');
+  themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+}
+
+themeToggle.addEventListener('click', () => {
+  if (body.classList.contains('dark-mode')) {
+    // Switch to light mode
+    body.classList.remove('dark-mode');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    localStorage.setItem('theme', 'light');
+  } else {
+    // Switch to dark mode
+    body.classList.add('dark-mode');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    localStorage.setItem('theme', 'dark');
+  }
+});
