@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Cors;
 using ChatbotAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,15 +13,16 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000", "https://your-frontend-domain.com")
+            policy.WithOrigins("http://localhost:8080", "http://127.0.0.1:8080", "http://localhost:5500", "file://")
                   .AllowAnyHeader()
-                  .AllowAnyMethod();
+                  .AllowAnyMethod()
+                  .AllowCredentials();
         });
 });
 
 // Register custom services
 builder.Services.AddScoped<IChatbotService, ChatbotService>();
-builder.Services.AddHttpClient(); // For external API calls if needed
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

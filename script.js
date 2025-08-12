@@ -1,7 +1,7 @@
 
 class Chatbot {
     constructor() {
-        this.apiEndpoint = 'https://localhost:7xxx/api/chat'; // Your C# API endpoint
+        this.apiEndpoint = 'https://localhost:7071/api/chat'; // Your C# API endpoint
         this.messageInput = document.getElementById('messageInput');
         this.sendButton = document.getElementById('sendButton');
         this.chatMessages = document.getElementById('chatMessages');

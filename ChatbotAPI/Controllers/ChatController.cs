@@ -18,5 +18,44 @@ namespace ChatbotAPI.Controllers
         }
 
         [HttpPost]
+        public async Task<ActionResult<ChatResponse>> SendMessage([FromBody] ChatRequest request)
+        {
+            try
+            {
+                if (request == null)
+                {
+                    return BadRequest(new ChatResponse
+                    {
+                        IsSuccess = false,
+                        ErrorMessage = "Request body is required"
+                    });
+                }
+
+                var response = await _chatbotService.ProcessMessageAsync(request);
+                
+                if (!response.IsSuccess)
+                {
+                    return BadRequest(response);
+                }
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error in chat endpoint");
+                return StatusCode(500, new ChatResponse
+                {
+                    IsSuccess = false,
+                    ErrorMessage = "Internal server error",
+                    Response = "I'm experiencing technical difficulties. Please try again later."
+                });
+            }
+        }
+
+        [HttpGet("health")]
+        public IActionResult HealthCheck()
+        {
+            return Ok(new { status = "healthy", timestamp = DateTime.UtcNow });
+        }
     }
 }
