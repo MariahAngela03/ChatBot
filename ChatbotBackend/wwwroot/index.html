@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile Chatbot Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+  <main class="container py-3 d-flex flex-column vh-100">
+    <header class="mb-2">
+      <h1 class="h4 text-center">Chatbot</h1>
+      <p class="text-center text-muted small">Simple mobile-first chat UI — backend in C# (no external API)</p>
+    </header>
+
+    <section id="chat-area" class="card flex-grow-1 overflow-auto mb-2">
+      <div class="card-body d-flex flex-column" id="messages" style="gap:0.75rem">
+        <!-- messages inserted here -->
+      </div>
+    </section>
+
+    <form id="chat-form" class="input-group">
+      <input id="message-input" type="text" class="form-control" placeholder="Type a message" autocomplete="off">
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

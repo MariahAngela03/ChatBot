@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "7uQaBY/DmHuceyUuzGxGpL8SFkbbXTZjLt+GCbZzzhk=",
+  "Source": "ChatbotBackend",
+  "BasePath": "_content/ChatbotBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ChatbotBackend\\wwwroot",
+      "Source": "ChatbotBackend",
+      "ContentRoot": "C:\\Users\\qwerty\\QTech\\ChatbotBackend\\wwwroot\\",
+      "BasePath": "_content/ChatbotBackend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\qwerty\\QTech\\ChatbotBackend\\wwwroot\\css\\styles.css",
+      "SourceId": "ChatbotBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\qwerty\\QTech\\ChatbotBackend\\wwwroot\\",
+      "BasePath": "_content/ChatbotBackend",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\qwerty\\QTech\\ChatbotBackend\\wwwroot\\index.html",
+      "SourceId": "ChatbotBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\qwerty\\QTech\\ChatbotBackend\\wwwroot\\",
+      "BasePath": "_content/ChatbotBackend",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\qwerty\\QTech\\ChatbotBackend\\wwwroot\\js\\chat.js",
+      "SourceId": "ChatbotBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\qwerty\\QTech\\ChatbotBackend\\wwwroot\\",
+      "BasePath": "_content/ChatbotBackend",
+      "RelativePath": "js/chat.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chat.js"
+    }
+  ]
+}
